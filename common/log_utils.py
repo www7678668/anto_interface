@@ -9,10 +9,10 @@ from common.setting_path import *
 import time,os
 import logging
 from common.localconfig_utils import local_config
-
+from common.setting_path import *
 class LogUtils():
-    def __init__(self,log_path = common_path):
-        self.log_name = os.path.join( common_path ,'ApiTest_%s.log'%time.strftime('%Y_%m_%d') )
+    def __init__(self):
+        self.log_name = os.path.join( log_data_path ,'ApiTest_%s.log'%time.strftime('%Y_%m_%d') )
         self.logger = logging.getLogger("ApiTestLog")
         self.logger.setLevel( local_config.LOG_LEVEL )
 
@@ -34,4 +34,4 @@ class LogUtils():
 logger = LogUtils().get_logger()   # 防止打印日志重复
 
 if __name__ == '__main__':
-    logger.info('hello')
+    logger.info('hello55666')
